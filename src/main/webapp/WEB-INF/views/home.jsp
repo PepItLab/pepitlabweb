@@ -7,11 +7,17 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <t:layout>
     <jsp:attribute name="pageTitle">
         <title>Accueil</title>
     </jsp:attribute>
     <jsp:body>
-        Hello,Pep'It Lab!
+        <c:forEach items="${news}" var="newDto">
+            <tr>
+                <td>${newDto.getTitle()}</td>
+                <td>${newDto.getContent()}</td>
+            </tr>
+        </c:forEach>
     </jsp:body>
 </t:layout>
