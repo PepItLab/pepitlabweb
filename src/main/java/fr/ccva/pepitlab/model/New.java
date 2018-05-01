@@ -12,6 +12,7 @@ public class New {
 
     @Id
     @Column(name = "id")
+    @GeneratedValue
     private long id;
 
     @Column(name = "title", nullable = false)

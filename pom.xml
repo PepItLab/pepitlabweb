@@ -122,6 +122,13 @@
           <artifactId>mysql-connector-java</artifactId>
           <version>${mysql-connector.version}</version>
       </dependency>
+
+      <!--Password Hash-->
+      <dependency>
+          <groupId>org.mindrot</groupId>
+          <artifactId>jbcrypt</artifactId>
+          <version>0.4</version>
+      </dependency>
   </dependencies>
 
   <build>

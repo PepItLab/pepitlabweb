@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
@@ -52,7 +53,7 @@ public class ApplicationConfiguration {
 
         factoryBean.setPackagesToScan("fr.ccva.pepitlab.model");
         factoryBean.setHibernateProperties(properties);
-        factoryBean.setAnnotatedClasses(New.class);
+        factoryBean.setAnnotatedClasses(New.class, User.class);
 
         return factoryBean;
     }
